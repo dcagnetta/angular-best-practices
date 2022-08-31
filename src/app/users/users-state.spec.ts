@@ -1,7 +1,8 @@
-import { IGetUserData, UserDataService, UsersState } from './user.state';
+import {  UsersState } from './user.state';
 import { TestBed, waitForAsync } from '@angular/core/testing';
 import { EMPTY, of } from 'rxjs';
-import { USER_DATA_SERVICE, Users } from './user.models';
+import { IGetUserData, USER_DATA_SERVICE, Users } from './user.models';
+import { UserDataService } from './user-data.service';
 
 
 describe(`${UsersState.name} Tests`, function(){
