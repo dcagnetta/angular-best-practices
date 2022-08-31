@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { UserFacadeService } from './users/user-facade.service';
+import { Users } from './users/user.models';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'best-practices';
+
+  allUsers$: Observable<Users> = this.facade.allUsers$
+
+  constructor(public facade: UserFacadeService) {  }
 }
